@@ -1,0 +1,12 @@
+### 无授权资源访问
+GET http://127.0.0.1:8006/nihil-test-auth-server/test
+
+### 用户登录
+POST http://127.0.0.1:8006/nihil-test-auth-server/auth/login
+Content-Type: application/x-www-form-urlencoded
+
+username=nihil&password=123456
+
+### 登录后访问资源
+GET http://127.0.0.1:8006/nihil-test-auth-server/test
+token: a526fa6597a84bac8826b256117920d9

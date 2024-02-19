@@ -1,0 +1,28 @@
+# 编译环境类型 dev | pro
+nihil-auth:
+  env: pro
+  cache-type: map
+  tenant:
+    enable: false
+    header: client_id
+  data-isolation: none
+  token:
+    header: token
+  session:
+    expiration: 10800000
+
+## time HasMap 参数：用于进行数据缓存
+# 任务数阈值：当任务数超过这个值时，将会每隔 一段时间进行 超时数据清洗
+# 检查间隔：进行超时对象清理任务的时间间隔，以 ms 为单位
+time-has:
+  timeout-task-threshold: 300
+  check-period: 30000
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+
+  data:
+    redis:
+      port: 6379
+      host: localhost
